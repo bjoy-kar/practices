@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Fundamendals</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("Javascript Fundamentals")</script></h2>
+		</div>
+		<div class="main_content">
+			<script>
+				//To concat two arrays
+				var arr1 = [1, 2, 3, 4, 5];
+				var arr2 = [4, 5, 6, 7, 8];
+				var concat_array = arr1.concat(arr2);
+				document.write(concat_array+"<br />");
+
+				//To sort arrays
+				//The sort() method sorts an array alphabetically: 
+				var colors = ['green', 'red', 'yellow', 'white'];
+				document.write('Before sorting: '+colors+'<br />');
+				colors.sort();
+				document.write('After sorting: '+colors+'<br />');
+
+				//When the sort() function compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.
+				//If we want to sort numeral arrays:
+				var numbers = [31, 1515, 868461, 1651, 79, 511565];
+				numbers.sort();
+				document.write('Before sorting: '+numbers+'<br />');
+				
+				function compare_function(x, y) {
+					return (x-y);
+					
+					//if we want to descend order sorting
+					//return (y-x);
+				}
+				numbers.sort(compare_function);
+				document.write('After sorting: '+numbers+'<br />');
+
+				//JavaScript Array length Property
+				//The length property sets or returns the number of elements in an array.
+				var fruits = ["Banana", "Orange", "Apple", "Mango"];
+				var fruits_length = fruits.length;
+				document.write(fruits_length+'<br />');
+
+				//if we want to set another element in an array in last position.
+				var fruits = ["Banana", "Orange", "Apple", "Mango"];
+				fruits[fruits.length] = "Papaya";
+				document.write(fruits+'<br />'); 
+
+				//OR
+
+				var fruits = ["Banana", "Orange", "Apple", "Mango"];
+				fruits.push("Papaya");
+				document.write(fruits+'<br />');
+
+				//if we want to remove first element in an array.
+				var fruits = ["Banana", "Orange", "Apple", "Mango"];
+				fruits.shift();
+				document.write(fruits+'<br />');
+
+				//if we want to add an element in the fiirst position in an array.
+				var fruits = ["Banana", "Orange", "Apple", "Mango"];
+				fruits.unshift("Papaya");
+				document.write(fruits+'<br />');
+
+				//if we want to remove the last element in an array.
+				var fruits = ["Banana", "Orange", "Apple", "Mango"];
+				fruits.pop();
+				document.write(fruits+'<br />');
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Training With Live Project")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
