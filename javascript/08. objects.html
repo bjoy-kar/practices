@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Fundamendals</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("Javascript Fundamentals")</script></h2>
+		</div>
+		<div class="main_content">
+			<script>
+				var person = {
+					firstname: "Bijoy ",
+					lastname: "Kar",
+					age: 28,
+					cusFunc: function() {
+						return this.firstname + this.lastname;
+					}
+				}
+				document.write(person.cusFunc());
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Training With Live Project")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
