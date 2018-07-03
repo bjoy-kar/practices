@@ -1,0 +1,135 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<title>CSS @keyframes Rule: Mario Kart Animations</title>
+  	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<link rel="manifest" href="site.webmanifest">
+  	<link rel="apple-touch-icon" href="icon.png">
+  	<!-- Place favicon.ico in the root directory -->
+  	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/main.css">
+    <style>
+        /* ==========================================================================
+           keyframes' custom styles
+           ========================================================================== */
+        /*// BASE STYLES //*/
+
+        html, body{
+          height: 100%;
+          width:100%;
+          overflow: hidden;
+          margin: 0;
+        }
+
+        .grass, .sky, .road{
+          position: relative;
+        }
+
+        .sky{
+          height: 40%;
+          background: skyblue;
+        }
+
+        .grass{
+          height: 30%;
+          background: seagreen;
+        }
+
+        .road{
+          height: 30%;
+          background: dimgrey;
+          box-sizing: border-box;
+          border-top: 10px solid grey;
+          border-bottom: 10px solid grey;
+          width: 100%;
+        }
+
+        .lines{
+          box-sizing: border-box;
+          border: 5px dashed #fff;
+          height: 0px;
+          width: 100%;
+          position: absolute;
+          top: 45%;
+        }
+
+        /*// ELEMENTS TO ANIMATE //*/
+        
+        .mario {
+            position: absolute;
+            top: -48px;
+            left: 0;
+            animation-name: drive;
+            animation-duration: 3s;
+        }
+
+        /*// KEYFRAMES //*/
+        @keyframes drive {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(500px);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+  	<!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+
+  	<!-- Add your site or application content here -->
+    <!-- Property Values
+        CSS Syntax: @keyframes animationname {keyframes-selector {css-styles;}}
+
+        Property                Values
+
+        animationname           Required. Defines the name of the animation.
+        keyframes-selector      Required. Percentage of the animation duration.
+
+                                Legal values:
+
+                                0-100%
+                                from (same as 0%)
+                                to (same as 100%)
+
+                                Note: You can have many keyframes-selectors in one animation.
+        css-styles              Required. One or more legal CSS style properties
+    -->
+  	<div class="sky"></div>
+    <div class="grass"></div>
+    <div class="road">
+        <div class="lines">
+            <img src="img/mario.png" alt="" class="mario">
+        </div>
+    </div>
+
+
+  	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.slim.min.js"><\/script>')</script>
+	<script src="js/vendor/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+  	<script src="js/plugins.js"></script>
+  	<script src="js/main.js"></script>
+
+  	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  	<script>
+    	window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    	ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  	</script>
+  	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
