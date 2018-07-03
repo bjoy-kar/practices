@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<title>CSS Transforms</title>
+  	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<link rel="manifest" href="site.webmanifest">
+  	<link rel="apple-touch-icon" href="icon.png">
+  	<!-- Place favicon.ico in the root directory -->
+  	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/main.css">
+    <style>
+        /* ==========================================================================
+           Transforms' custom styles
+           ========================================================================== */
+        .wrapper {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        img {
+            transform: rotateZ(-90deg) translateY(200px) scale(2);
+        }
+    </style>
+</head>
+
+<body>
+  	<!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+
+  	<!-- Add your site or application content here -->
+    <!-- Syntax: 
+            transform: none|transform-functions|initial|inherit; 
+    -->
+    <!-- Property Values
+    Value                                       Description
+    
+    none                                        Defines that there should be no transformation  
+    matrix(n,n,n,n,n,n)                         Defines a 2D transformation, using a matrix of six values
+    matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)   Defines a 3D transformation, using a 4x4 matrix of 16 values    
+    translate(x,y)                              Defines a 2D translation    
+    translate3d(x,y,z)                          Defines a 3D translation    
+    translateX(x)                               Defines a translation, using only the value for the X-axis  
+    translateY(y)                               Defines a translation, using only the value for the Y-axis  
+    translateZ(z)                               Defines a 3D translation, using only the value for the Z-axis   
+    scale(x,y)                                  Defines a 2D scale transformation   
+    scale3d(x,y,z)                              Defines a 3D scale transformation   
+    scaleX(x)                                   Defines a scale transformation by giving a value for the X-axis     
+    scaleY(y)                                   Defines a scale transformation by giving a value for the Y-axis     
+    scaleZ(z)                                   Defines a 3D scale transformation by giving a value for the Z-axis  
+    rotate(angle)                               Defines a 2D rotation, the angle is specified in the parameter  
+    rotate3d(x,y,z,angle)                       Defines a 3D rotation   
+    rotateX(angle)                              Defines a 3D rotation along the X-axis  
+    rotateY(angle)                              Defines a 3D rotation along the Y-axis  
+    rotateZ(angle)                              Defines a 3D rotation along the Z-axis  
+    skew(x-angle,y-angle)                       Defines a 2D skew transformation along the X- and the Y-axis    
+    skewX(angle)                                Defines a 2D skew transformation along the X-axis   
+    skewY(angle)                                Defines a 2D skew transformation along the Y-axis   
+    perspective(n)                              Defines a perspective view for a 3D transformed element     
+    initial                                     Sets this property to its default value.     
+    inherit                                     Inherits this property from its parent element. 
+    -->
+  	<div class="wrapper">
+       <img src="img/cloud.png" alt=""> 
+    </div>
+
+
+  	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.slim.min.js"><\/script>')</script>
+	<script src="js/vendor/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+  	<script src="js/plugins.js"></script>
+  	<script src="js/main.js"></script>
+
+  	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  	<script>
+    	window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    	ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  	</script>
+  	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
