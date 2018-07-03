@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<title>CSS Transition Properties</title>
+  	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<link rel="manifest" href="site.webmanifest">
+  	<link rel="apple-touch-icon" href="icon.png">
+  	<!-- Place favicon.ico in the root directory -->
+  	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/main.css">
+    <style>
+        /* ==========================================================================
+           Transitions' custom styles
+           ========================================================================== */
+        .wrapper {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        img {
+            transform: rotateZ(-90deg) translateY(200px) scale(2);
+        }
+        .circle {
+            width: 100px;
+            padding: 50px 0;
+            line-height: 0;
+            margin: 60px auto;
+            background: pink;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 1s, transform 1s 1s linear;
+            /* ease in OR ease out also another value. */
+        }
+        .circle:hover {
+            background: salmon;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+  	<!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+
+  	<!-- Add your site or application content here -->
+    <!-- Property Values
+    Property              Description
+    transition                    A shorthand property for setting the four transition properties into a single property
+
+    transition-delay              Specifies a delay (in seconds) for the transition effect
+    transition-duration           Specifies how many seconds or milliseconds a transition effect takes to complete
+
+    transition-property           Specifies the name of the CSS property the transition effect is for
+    transition-timing-function    Specifies the speed curve of the transition effect 
+    -->
+  	<div class="wrapper">
+       <img src="img/cloud.png" alt="">
+       <div class="circle">Hover Me</div> 
+    </div>
+
+
+  	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.slim.min.js"><\/script>')</script>
+	<script src="js/vendor/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+  	<script src="js/plugins.js"></script>
+  	<script src="js/main.js"></script>
+
+  	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  	<script>
+    	window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    	ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  	</script>
+  	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
