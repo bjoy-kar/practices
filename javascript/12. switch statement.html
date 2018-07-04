@@ -11,7 +11,45 @@
 			<h2>Javascript Fundamentals</h2>
 		</div>
 		<div class="main_content">
-			our content
+			<!-- 
+				switch(expression) {
+				    case n:
+				        code block
+				        break;
+				    case n:
+				        code block
+				        break;
+				    default:
+				        code block
+				}
+			-->
+			<div id="show"></div>
+			<input type="text" id="codeText">
+			<button onclick="checkCoding()">Check</button>
+			<script type="text/javascript">
+				function checkCoding() {
+					var txt;
+					var coding = document.getElementById('codeText').value;
+
+					switch(coding) {
+					    case "java":
+					        txt = "I love java";
+					        break;
+					    case "php":
+					        txt = "I love php";
+					        break;
+					    case "bootstrap":
+					        txt = "I love bootstrap";
+					        break;
+					    case "javascript":
+					        txt = "I love javascript";
+					        break;
+					    default:
+					        txt = "I love programming";
+					}
+					document.getElementById("show").innerHTML = txt;
+				}
+			</script>
 		</div>
 		<div class="footer">
 			<h2>Training With Live Project</h2>

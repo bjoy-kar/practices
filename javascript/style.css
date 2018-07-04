@@ -9,24 +9,25 @@
 body {
 	font-family: arial; 
 	font-size: 18px; 
-	color: #444;
+	background: #444;
 	line-height: 25px; 
 }
 .content {
-	background: #f0f0f0;
+	background: #333333;
 	width: 800px;
 	margin: 0 auto;
 }
 .main_content {
-	background: #ffffff;
+	background: #dddddd;
 	margin: 10px;
 	min-height: 500px;
 	padding: 5px 10px;
 }
 .header, .footer {
 	text-align: center;
-	background: #dddddd;
+	background: #333333;
 	padding: 10px;
+	color: #ffffff;
 }
 
 /* ==========================================================================
