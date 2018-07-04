@@ -65,19 +65,78 @@
         
         .mario {
             position: absolute;
-            top: -48px;
+            top: -148px;
+            left: 0;
+            /*animation-name: drive;
+            animation-duration: 3s;
+            animation-fill-mode: both;
+            animation-delay: 0s;
+            -webkit-animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;*/
+            animation: drive 3s both infinite linear,
+                        jump 2s 2s infinite ease;
+        }
+
+        .luigi {
+            position: absolute;
+            top: -60px;
             left: 0;
             animation-name: drive;
-            animation-duration: 3s;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+            animation-delay: 0s;
+            -webkit-animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-direction: normal;
+            -o-animation-direction: normal;
+            animation-direction: normal;
+        }
+        .cloud {
+            position: absolute;
+        }
+        .cloud:nth-child(1) {
+            width: 200px;
+            top: 120px;
+            opacity: 0.5;
+            animation: wind 40s linear infinite reverse;
+        }
+        .cloud:nth-child(2) {
+            width: 300px;
+            top: 0px;
+            animation: wind 50s linear infinite reverse;
         }
 
         /*// KEYFRAMES //*/
         @keyframes drive {
             from {
-                transform: translateX(0);
+                transform: translateX(-200px);
             }
             to {
-                transform: translateX(500px);
+                transform: translateX(1500px);
+            }
+        }
+
+        @keyframes wind {
+            from {
+                left: -300px;
+            }
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes jump {
+            0% {
+                top: -40px;
+            }
+            50%{
+                top: -140px;
+            }
+            100%{
+                top: -40px;
             }
         }
         
@@ -107,11 +166,15 @@
                                 Note: You can have many keyframes-selectors in one animation.
         css-styles              Required. One or more legal CSS style properties
     -->
-  	<div class="sky"></div>
+  	<div class="sky">
+       <img src="img/cloud.png" alt="" class="cloud"> 
+       <img src="img/cloud.png" alt="" class="cloud"> 
+    </div>
     <div class="grass"></div>
     <div class="road">
         <div class="lines">
             <img src="img/mario.png" alt="" class="mario">
+            <img src="img/luigi.png" alt="" class="luigi">
         </div>
     </div>
 
