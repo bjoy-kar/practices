@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<title>Animating a Shopping Cart</title>
+  	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<link rel="manifest" href="site.webmanifest">
+  	<link rel="apple-touch-icon" href="icon.png">
+  	<!-- Place favicon.ico in the root directory -->
+  	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/main.css">
+    <style>
+        body{
+          background: #333;
+          font-family: verdana;
+        }
+
+        .wrapper{
+          width: 100%;
+          max-width: 1200px;
+          margin: 40px auto;
+        }
+
+        h1{
+          color: #fff;
+          font-weight: normal;
+          text-align: center;
+          font-size: 48px;
+        }
+
+        .panels{
+          list-style-type: none;
+          padding: 0;
+        }
+
+        .panels li{
+          position: relative;
+          width: 25%;
+          margin: 0;
+          display: block;
+          box-sizing: border-box;
+          float: left
+        }
+
+        .panels li div{
+          width: 100%;
+          padding: 50% 0;
+          text-align: center;
+          color: #fff;
+          font-size: 20px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          line-height: 0;
+          cursor: pointer;
+        }
+
+        /*// ANIMATION STYLES //*/
+        .panels div.back {
+            transform: rotateY(90deg);
+        }
+        .panels div.front {
+            position: absolute;
+        }
+        .panels li:hover div.front {
+            animation: trwil 0.2s ease-in forwards;
+        }
+        .panels li:hover div.back {
+            animation: trwil 0.5s 0.2s ease-out forwards reverse;
+        }
+
+        @keyframes trwil {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(90deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body class="basket">
+  	<!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+
+  	<!-- Add your site or application content here -->
+  	<div class="wrapper">
+        <h1>Pick a Card</h1>
+        <ul class="panels">
+            <li>
+                <div class="front" style="background: #267df4">Hello</div>
+                <div class="back" style="background: #4c8fea">World</div>
+            </li>
+            <li>
+                <div class="front" style="background: #9126f4">Get to</div>
+                <div class="back" style="background: #a144f7">The chopper</div>
+            </li>
+            <li>
+                <div class="front" style="background: #21bf3b">foo</div>
+                <div class="back" style="background: #4dd763">bar</div>
+            </li>
+            <li>
+                <div class="front" style="background: #c3333d">tempus</div>
+                <div class="back" style="background: #e74853">fugit</div>
+            </li>
+            <li>
+                <div class="front" style="background: #c3333d">html</div>
+                <div class="back" style="background: #e74853">rocks</div>
+            </li>
+            <li>
+                <div class="front" style="background: #21bf3b">A</div>
+                <div class="back" style="background: #4dd763">B</div>
+            </li>
+            <li>
+                <div class="front" style="background: #9126f4">Super</div>
+                <div class="back" style="background: #a144f7">Mariokart</div>
+            </li>
+            <li>
+                <div class="front" style="background: #267df4">j</div>
+                <div class="back" style="background: #4c8fea">Query</div>
+            </li>
+        </ul>
+    </div>
+
+
+  	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.slim.min.js"><\/script>')</script>
+    <script>
+        $("button").on("click", function(){
+            $(this).closest("li").find("img").clone().addClass("zoom").appendTo("body");
+            setTimeout(function(){
+                $(".zoom").remove();
+            }, 1000);
+        });
+    </script>
+	<script src="js/vendor/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+  	<script src="js/plugins.js"></script>
+  	<script src="js/main.js"></script>
+
+  	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  	<script>
+    	window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    	ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  	</script>
+  	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
