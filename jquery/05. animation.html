@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<title>Hide Show Toggle</title>
+  	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<link rel="manifest" href="site.webmanifest">
+  	<link rel="apple-touch-icon" href="icon.png">
+  	<!-- Place favicon.ico in the root directory -->
+  	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+  
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  	<!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+
+  	<!-- Add your site or application content here -->
+  	<section class="content">
+        <div class="header">
+            <h2>jQuery Fundamentals</h2>
+        </div>
+        <div class="main_content">
+        	<button class="btn btn-primary" id="move_to_left">Move To Left</button>
+        	<button class="btn btn-warning" id="toggle_height">Toggle Height</button>
+            <button class="btn btn-info" id="animate_box_size">Animate Box Size</button>
+            <button class="btn btn-info" id="enlarge_font_size">Enlarge Font Size</button>
+
+            <div class="box1 card mt-2 bg-dark text-light">
+                <div class="card-body">
+                    <h3 class="card-title">Bijoy Kumar Kar</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid provident ea inventore, eligendi delectus voluptates soluta vero saepe facere excepturi!</p>
+                </div>
+            </div>
+            <div class="box2 card mt-2 bg-dark text-light">
+                <div class="card-body">
+                    <h3 class="card-title">Bijoy Kumar Kar</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid provident ea inventore, eligendi delectus voluptates soluta vero saepe facere excepturi!</p>
+                </div>
+            </div>
+            <div class="box3 card mt-2 bg-dark text-light">
+                <div class="card-body">
+                    <h3 class="card-title">Bijoy Kumar Kar</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid provident ea inventore, eligendi delectus voluptates soluta vero saepe facere excepturi!</p>
+                </div>
+            </div>
+            <div class="box4 card mt-2 bg-dark text-light">
+                <div class="card-body">
+                    <h3 class="card-title">Bijoy Kumar Kar</h3>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>Training With Live Project</h2>
+        </div>
+    </section>
+
+
+  	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+	<script src="js/vendor/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+  	<script src="js/plugins.js"></script>
+  	<script src="js/main.js"></script>
+    <script type="text/javascript">
+        // Basic syntax is: $(selector).action(speed,easing,callback)
+        // dblclick(double click) can be used instead of click
+        // mouseenter can be used instead of click
+        // mouseleave can be used instead of click
+        $(document).ready(function(){
+		    // $(selector).animate({params},speed,callback);
+		    $("#move_to_left").click(function(){
+			    $(".box1").animate({
+                    left: '250px'
+                });
+			});
+		    // $(selector).slideUp(speed,callback);
+			$("#toggle_height").click(function(){
+			    $(".box2").animate({
+                    height: 'toggle'
+                });
+			});
+			// $(selector).slideToggle(speed,callback);
+            $("#animate_box_size").click(function(){
+                var boxSize = $(".box3");
+                boxSize.animate({height: '300px', opacity: '0.4'}, "slow");
+                boxSize.animate({width: '300px', opacity: '0.8'}, "slow");
+                boxSize.animate({width: '100%', opacity: '0.8'}, "slow");
+                boxSize.animate({height: '150px', opacity: '1'}, "slow");
+            });
+            // $(selector).slideToggle(speed,callback);
+            $("#enlarge_font_size").click(function(){
+                $(".box4 .card-title").animate({fontSize: '60px'}, "slow");
+            });
+		});
+    </script>
+</body>
+
+</html>
