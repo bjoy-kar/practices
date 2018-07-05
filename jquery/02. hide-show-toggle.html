@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<title>Hide Show Toggle</title>
+  	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<link rel="manifest" href="site.webmanifest">
+  	<link rel="apple-touch-icon" href="icon.png">
+  	<!-- Place favicon.ico in the root directory -->
+  	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+  
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  	<!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+
+  	<!-- Add your site or application content here -->
+  	<section class="content">
+        <div class="header">
+            <h2>jQuery Fundamentals</h2>
+        </div>
+        <div class="main_content">
+        	<button class="btn" id="hide">Hide</button>
+        	<button class="btn" id="show">Show</button>
+        	<button class="btn" id="toggle">Toggle</button>
+
+            <div class="para">
+              	<h3>Bijoy Kumar Kar</h3>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid provident ea inventore, eligendi delectus voluptates soluta vero saepe facere excepturi!</p>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>Training With Live Project</h2>
+        </div>
+    </section>
+
+
+  	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+	<script src="js/vendor/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+  	<script src="js/plugins.js"></script>
+  	<script src="js/main.js"></script>
+    <script type="text/javascript">
+        // Basic syntax is: $(selector).hide(speed,easing,callback)
+        // dblclick(double click) can be used instead of click
+        // mouseenter can be used instead of click
+        // mouseleave can be used instead of click
+        $(document).ready(function(){
+		    // Hide the matched elements.
+		    $("#hide").click(function(){
+			    $(".para").hide('slow');
+			});
+		    // Show the matched elements.
+			$("#show").click(function(){
+			    $(".para").show('slow');
+			});
+			// Toggle the matched elements.
+			$("#toggle").click(function(){
+			    $(".para").toggle('slow');
+			});
+		});
+    </script>
+</body>
+
+</html>
