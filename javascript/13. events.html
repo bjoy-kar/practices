@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Events</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="alert('on loading body will show an alert')">
+	<section class="content">
+		<div class="header">
+			<h2>Javascript Fundamentals</h2>
+		</div>
+		<div class="main_content">
+			<!-- 
+				Event 			Description
+				onchange 		An HTML element has been changed
+				onclick 		The user clicks an HTML element
+				onmouseover 	The user moves the mouse over an HTML element
+				onmouseout 		The user moves the mouse away from an HTML element
+				onkeydown 		The user pushes a keyboard key
+				onload 			The browser has finished loading the page
+			-->
+			<button onclick="checkEvents()">on click</button>
+			<button onmouseover="checkEvents()">on mouse over</button>
+			<button ondblclick="checkEvents()">on double click</button>
+			<button onmouseup="checkEvents()">on mouse up</button>
+			<button onmousedown="checkEvents()">on mouse down</button>
+			<button onkeydown="checkEvents()">on key down</button>
+			<button onkeyup="checkEvents()">on key up</button>
+			<button onkeypress="checkEvents()">on key press</button><br />
+			<input type="text" onfocus="checkEvents()" placeholder="on focus">
+			<input type="text" onblur="checkEvents()" placeholder="on blur">
+			<script type="text/javaScript">
+				function checkEvents() {
+					console.log('Lorem ipsum dolor sit amet.');	
+				}
+			</script>
+		</div>
+		<div class="footer">
+			<h2>Training With Live Project</h2>
+		</div>
+	</section>
+</body>
+</html>
