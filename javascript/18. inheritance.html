@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Prototype Inheritance</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<header class="header">
+			<h2><script>document.write("Javascript Fundamentals");</script></h2>
+		</header>
+		<section class="main_content">
+			<script type="text/javascript">
+				// All JavaScript objects inherit properties and methods from a prototype.
+
+				// Date objects inherit from Date.prototype. Array objects inherit from Array.prototype. Person objects inherit from Person.prototype.
+
+				// The Object.prototype is on the top of the prototype inheritance chain:
+
+				// Date objects, Array objects, and Person objects inherit from Object.prototype.
+				// Adding Properties and Methods to Objects
+
+				// Sometimes you want to add new properties (or methods) to all existing objects of a given type.
+
+				// Sometimes you want to add new properties (or methods) to an object constructor.
+				// Using the prototype Property
+
+				// The JavaScript prototype property allows you to add new properties to object constructors:
+				function Person(first, last, age, eyecolor) {
+				    this.firstName = first;
+				    this.lastName = last;
+				    this.age = age;
+				    this.eyeColor = eyecolor;
+				}
+				Person.prototype.nationality = "English";
+				var pro_inherit = new Person();
+				document.write(pro_inherit.nationality + "<br />");
+
+				// The JavaScript prototype property also allows you to add new methods to objects constructors:
+				function Person(first, last, age, eyecolor) {
+				    this.firstName = first;
+				    this.lastName = last;
+				    this.age = age;
+				    this.eyeColor = eyecolor;
+				}
+				Person.prototype.name = function() {
+				    return this.firstName + " " + this.lastName;
+				};
+				var pro_inherit = new Person("Bijoy", "Kar", 28, "Black");
+				document.write(pro_inherit.name() + "<br />");
+
+				// Only modify your own prototypes. Never modify the prototypes of standard JavaScript objects. 
+			</script>
+			<script type="text/javascript">
+				function totalNum(a, b) {
+					this.x = a;
+					this.y = b;
+					this.sum = function() {
+						return this.x + this.y;
+					}
+				}
+
+				function totalProduct(a, b) {
+					this.x = a;
+					this.y = b;
+					this.product = function() {
+						return this.x * this.y;
+					}
+				}
+
+				totalNum.prototype = new totalProduct();
+
+				// tn.sum = function() {
+				// 	return 60000;
+				// } ---> It will not show before tn. Because tn doesn't exist here.
+
+				var tn = new totalNum(10, 5);
+
+				tn.product = function() {
+					return 50000;
+				}
+
+				document.write(tn.sum() + "<br />"); // 15
+				document.write(tn.product() + "<br />"); // 50000
+			</script>
+		</section>
+		<footer class="footer">
+			<h2><script>document.write("Javascript With Different Projects");</script></h2>
+		</footer>
+	</section>
+</body>
+</html>
