@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Static Methods and Properties</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<header class="header">
+			<h2><script>document.write("Javascript Fundamentals");</script></h2>
+		</header>
+		<section class="main_content">
+			<script type="text/javascript">
+				function totalNum() {
+					// var b = 80;
+					this.x = 20; 
+					this.y = function() {
+						return this.x + this.x;
+					}
+				}
+
+				totalNum.prototype.a = 50;
+				totalNum.b = 80; // STATIC PROPERTY: means var b = 80; in totalNum function which one is private property
+				//totalNum.c = function(){}; // STATIC METHOD
+
+				var tn = new totalNum();
+
+				//tn.a = 5161; // it will not search prototype first
+
+				document.write("Result is: " + tn.a + "<br />"); // 5161
+				document.write("Result is: " + tn.b + "<br />"); // undefined
+
+				// if we want to access in static property we have to write directly
+				document.write("Result is: " + totalNum.b + "<br />"); // 80
+			</script>
+		</section>
+		<footer class="footer">
+			<h2><script>document.write("Javascript With Different Projects");</script></h2>
+		</footer>
+	</section>
+</body>
+</html>
