@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Prototype Inheritance</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<header class="header">
+			<h2><script>document.write("Javascript Fundamentals");</script></h2>
+		</header>
+		<section class="main_content">
+			<script type="text/javascript">
+				function totalNum(a) {
+					// Private
+					x = 20; 
+					total = function() {
+						return x + a;
+					}
+
+					// Public
+					this.result = function() {
+						this.sum = total();
+						return this.sum + this.sum;
+					}
+				}
+
+				var tn = new totalNum(10);
+
+				document.write("Result is: " + tn.result() + "<br />"); // 60
+				console.log("Total is: " + tn.total() + "<br />"); // error
+			</script>
+		</section>
+		<footer class="footer">
+			<h2><script>document.write("Javascript With Different Projects");</script></h2>
+		</footer>
+	</section>
+</body>
+</html>
