@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Own String Methods</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<header class="header">
+			<h2><script>document.write("Javascript Fundamentals");</script></h2>
+		</header>
+		<section class="main_content">
+			<script type="text/javascript">
+				// with built-in methods
+				function custom_reverse(a) {
+					return a.split("").reverse().join("");
+				}
+
+				var x = "A B C D";
+				var cRev = custom_reverse(x);
+				document.write(cRev + "<br />");
+
+				// with own string methods
+				// function custom_rev(b) {
+				// 	return b.split("").reverse().join("");
+				// }
+
+				// var y = "A B C D";
+				// var c_rev = custom_rev(y);
+				// document.write(c_rev + "<br />");
+			</script>
+		</section>
+		<footer class="footer">
+			<h2><script>document.write("Javascript With Different Projects");</script></h2>
+		</footer>
+	</section>
+</body>
+</html>
