@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Fundamental Course</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("JavaScript Fundamental Course")</script></h2>
+		</div>
+		<div class="main_content">
+			<script>
+				"use strict";
+				var testString = " Lorem ipsum dolor sit amet, consectetur adipisicing elit. ";
+				
+				document.write(testString.length + "<br />"); // length of the string as an array
+				document.write(testString.split(" ") + "<br />"); // split every word with comma
+				document.write(testString.indexOf("o", 2) + "<br />"); // position of given letter/word
+				document.write(testString.lastIndexOf("o") + "<br />"); // last position of given letter/word
+				document.write(testString.toUpperCase() + "<br />"); // Uppercase
+				document.write(testString.toLowerCase() + "<br />"); // lowercase
+				document.write(testString.substring(0, 10) + "<br />"); // string.substring(start, end)
+				document.write(testString.slice(-5) + "<br />"); // string.slice(start, end)
+				document.write(testString.trim() + "<br />"); // string.trim()
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Training With Kuthi Devs")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
