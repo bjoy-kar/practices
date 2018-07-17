@@ -13,17 +13,46 @@
 		<div class="main_content">
 			<script>
 				"use strict";
-				var testString = " Lorem ipsum dolor sit amet, consectetur adipisicing elit. ";
-				
-				document.write(testString.length + "<br />"); // length of the string as an array
-				document.write(testString.split(" ") + "<br />"); // split every word with comma
-				document.write(testString.indexOf("o", 2) + "<br />"); // position of given letter/word
-				document.write(testString.lastIndexOf("o") + "<br />"); // last position of given letter/word
-				document.write(testString.toUpperCase() + "<br />"); // Uppercase
-				document.write(testString.toLowerCase() + "<br />"); // lowercase
-				document.write(testString.substring(0, 10) + "<br />"); // string.substring(start, end)
-				document.write(testString.slice(-5) + "<br />"); // string.slice(start, end)
-				document.write(testString.trim() + "<br />"); // string.trim()
+				var arrays = ["one", "two", "three", "four"];
+				document.write(arrays.length + "<br />"); // The length property sets or returns the number of elements in an array.
+
+				var arrPush = arrays.push("five");
+				document.write(arrays + "<br />"); // The push() method adds new items to the end of an array, and returns the new length.
+
+				var arrUnshift = arrays.unshift("zero");
+				document.write(arrays + "<br />"); // The unshift() method adds new items to the beginning of an array, and returns the new length.
+
+				var arrpop = arrays.pop();
+				document.write(arrays + "<br />"); // The pop() method removes the last element of an array, and returns that element.
+
+				var arrShift = arrays.shift(); // The shift() method removes the first item of an array.
+				document.write(arrays + "<br />"); 
+
+				var arrSplice = arrays.splice(0, 2, "five", "six"); // array.splice(index, howmany, item1, ....., itemX)
+				document.write(arrays + "<br />"); // The splice() method adds/removes items to/from an array, and returns the removed item(s).
+
+				var arrReverse = arrays.reverse(); // The reverse() method reverses the order of the elements in an array.
+				document.write(arrays + "<br />"); 
+
+				var arrSort = arrays.sort(); 
+				document.write(arrays + "<br />"); // The sort() method sorts an array alphabetically
+
+				var numericArrSort = [40, 100, 1, 5, 25, 10];
+				numericArrSort.sort();
+				document.write(numericArrSort + "<br />"); // The sort() method sorts an array alphabetically
+				numericArrSort.sort(function(a, b){return a - b});
+				document.write(numericArrSort + "<br />"); 
+				// now numericArrSort[0] contains the lowest value
+				// and numericArrSort[numericArrSort.length-1] contains the highest value	
+
+				var arrJoin = arrays.join(" "); // Join the elements of an array into a string
+				document.write(arrJoin + "<br />"); // The join() method joins the elements of an array into a string, and returns the string.
+
+				var arrIndex = arrays.indexOf("three"); // Join the elements of an array into a string
+				document.write(arrIndex + "<br />"); // The join() method joins the elements of an array into a string, and returns the string.
+
+				var arrSlice = arrays.slice(-3, -1); // array.slice(start, end)
+				document.write(arrSlice + "<br />"); // The slice() method returns the selected elements in an array, as a new array object.
 			</script>
 		</div>
 		<div class="footer">
