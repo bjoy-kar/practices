@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Fundamental Course</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("JavaScript Fundamental Course")</script></h2>
+		</div>
+		<div class="main_content">
+			<p>Minimum age: <input type="number" id="ageToCheck" value="12"></p>
+			<button onclick="myFunction()">Try it</button>
+
+			<p>All ages above minimum? <span id="agedemo"></span></p>
+			<p id="demo"></p>
+			<button onclick="myFunctionAge()">Try it</button>
+			<p id="agefilter"></p>
+			<script>
+				"use strict";
+				// array.forEach(function(currentValue, index, arr), thisValue)
+				var arrays = ["one", "two", "three", "four"];
+				var selectorVar = document.getElementById('demo');
+
+				arrays.forEach(function(value, index){
+					selectorVar.innerHTML = selectorVar.innerHTML + "This is our current item: " + value + " and this is our index: " + index + "<br />";
+				});
+
+
+				// The every() method checks if all elements in an array pass a test (provided as a function).
+				// array.every(function(currentValue, index, arr), thisValue)
+				// Check if all the values in the ages array are a specific number or over :
+				var ages = [32, 33, 12, 40];
+
+				function checkAdult(age) {
+					// age will come from ages
+				    return age >= document.getElementById("ageToCheck").value;
+				}
+
+				function myFunction() {
+				    document.getElementById("agedemo").innerHTML = ages.every(checkAdult);
+				}
+
+				// The filter() method creates an array filled with all array elements that pass a test (provided as a function).
+
+				var agesArray = [32, 33, 16, 40];
+
+				function checkAdultAge(ageArray) {
+				    return ageArray >= 18;
+				}
+
+				function myFunctionAge() {
+				    document.getElementById("agefilter").innerHTML = agesArray.filter(checkAdultAge);
+				}
+
+				// The map() method creates a new array with the results of calling a function for every array element.
+				// array.map(function(currentValue, index, arr), thisValue)
+				var numbers = [65, 44, 12, 4];
+
+				function multiplyArrayElement(num) {
+				    return num * document.getElementById("multiplyWith").value;
+				}
+
+				function myFunction() {
+				    document.getElementById("demo").innerHTML = numbers.map(multiplyArrayElement);
+				}
+
+				// The reduce() method reduces the array to a single value.
+				var nums = [65, 44, 12, 4];
+				function getSum(total, num) {
+				    return total + num;
+				}
+				function cus_func() {
+					document.getElementById("demo").innerHTML = numbers.reduce(getSum);
+				}
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Lorem Ipsum Dolor Sit Amet")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
