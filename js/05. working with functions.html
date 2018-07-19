@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Fundamental Course</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("JavaScript Fundamental Course")</script></h2>
+		</div>
+		<div class="main_content">
+			<p id="demo"></p>
+			<script>
+				"use strict";
+				var newFunc = function(arg1, arg2, arg3) {
+					return arg1 + arg2;
+				}
+				document.write(newFunc.length + "<br />"); // shows argument numbers
+
+				// With the call() method, you can write a method that can be used on different objects. 
+				var person = {
+					fname: "Bijoy",
+					lname: "Kar",
+					profession: "Developer",
+				}
+
+				function hello(users) {
+					return "Hello " + users +". I am " + this.fname + " " + this.lname + " and I am a " + this.profession;
+				}
+				document.write(hello.call(person, "Sir") + "<br />"); // argument can be passed
+
+				// With the apply() method, you can write a method that can be used on different objects.
+				function introduce(users) {
+					return "Hello " + users +". I am " + this.fname + " " + this.lname + " and I am a " + this.profession;
+				}
+				document.write(hello.apply(person, ["Abul"]) + "<br />"); // argument can be passed
+
+				// The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+				function addToCart(price, fee) {
+					if(!this.total) {
+						this.total = 0;
+					}
+					// console.log(fee);
+					this.total = this.total + price + fee || 0;
+					return this.fname + " , your total cart is $" + this.total;
+				}
+				var bijoysCart = addToCart.bind(person);
+
+				document.write(bijoysCart(56, 10) + "<br />");
+				document.write(bijoysCart(44, 15) + "<br />");
+				document.write(bijoysCart(50, 55) + "<br />");
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Lorem Ipsum Dolor Sit Amet")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
