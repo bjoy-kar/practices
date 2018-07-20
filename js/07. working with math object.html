@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Fundamental Course</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("JavaScript Fundamental Course")</script></h2>
+		</div>
+		<div class="main_content">
+			<p id="demo"></p>
+			<script>
+				(function() {
+					"use strict";
+					document.write(Math.PI + "<br />"); // returns 3.141592653589793 
+					document.write(Math.round(4.7) + "<br />"); // returns 5
+					document.write(Math.pow(8, 2) + "<br />"); // returns 64
+					document.write(Math.sqrt(64) + "<br />"); // returns 8
+					document.write(Math.abs(-4.7) + "<br />"); // returns 4.7 
+					document.write(Math.ceil(4.4) + "<br />"); // returns 5
+					document.write(Math.floor(4.7) + "<br />"); // returns 4 
+					document.write(Math.sin(90 * Math.PI / 180) + "<br />"); // returns 1 (the sine of 90 degrees)
+					document.write(Math.cos(0 * Math.PI / 180) + "<br />"); // returns 1 (the cos of 0 degrees)
+					document.write(Math.min(0, 150, 30, 20, -8, -200) + "<br />"); // returns 150
+					document.write(Math.max(0, 150, 30, 20, -8, -200) + "<br />"); // returns 150 
+					document.write(Math.random() + "<br />"); // returns a random number  
+				}())
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Lorem Ipsum Dolor Sit Amet")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
