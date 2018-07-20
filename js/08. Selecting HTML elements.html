@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Fundamental Course</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("JavaScript Fundamental Course")</script></h2>
+		</div>
+		<div class="main_content">
+			<h1 id="headingOne" class="special habijabi">Lorem ipsum dolor sit amet.</h1>
+			<h3>Lorem ipsum dolor sit amet.</h3>
+			<p class="paras">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, eaque?</p>
+			<p class="paras">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus odit asperiores quia laudantium consectetur ab.</p>
+			<script>
+				(function() {
+					"use strict";
+					console.log(document.getElementById('headingOne'));
+					console.log(document.getElementsByClassName('paras'));
+					console.log(document.getElementsByTagName('h3'));
+					// document.getElementsByName(name);
+
+					var firstHeading = document.getElementById("headingOne");
+					console.log(firstHeading.id); // shows id
+					firstHeading.id = "changedId";
+					console.log(firstHeading.id); // shows changed id
+					firstHeading.classList.add("bijoy"); // add class
+					firstHeading.classList.remove("habijabi"); // remove class
+					console.log(firstHeading.classList.contains("habijabi")); // search class
+					console.log(firstHeading.className);
+					console.log(firstHeading.tagName); // show type 
+					console.log(firstHeading.nodeType); // show node type 
+					console.log(firstHeading.childNodes[0].nodeType); // show node type 
+					console.log(firstHeading.childNodes[0].nodeName); // show node name 
+					firstHeading.textContent = "Developer Bijoy Kumar Kar";
+					firstHeading.innerHTML = "<span>" + firstHeading.innerHTML + "</span>"; // wrap inner HTML
+					// firstHeading.outerHTML = "<p>" + firstHeading.innerHTML + "</p>"; // wrap outer HTML
+					firstHeading.setAttribute("contenteditable", true); // set an attribute
+					firstHeading.removeAttribute("contenteditable"); // remove an attribute
+					console.log(firstHeading.hasAttribute("contenteditable")); // search an attribute
+				}());
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Training With Kuthi Devs")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
