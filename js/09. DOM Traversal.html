@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Fundamental Course</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("JavaScript Fundamental Course")</script></h2>
+		</div>
+		<div class="main_content">
+			<h1 id="headingOne" class="special habijabi">Lorem ipsum dolor sit amet.</h1>
+			<h3>Lorem ipsum dolor sit amet.</h3>
+			<p class="paras">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, eaque?</p>
+			<p class="paras">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus odit asperiores quia laudantium consectetur ab.</p>
+			<br />
+			<section id="newSection">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, sint.</p>
+				<h2>Lorem ipsum dolor sit amet.</h2>
+				<h3>Lorem ipsum dolor sit.</h3>
+			</section>
+			<script>
+				(function() {
+					"use strict";
+					var section = document.getElementById("newSection");
+					console.log(section.childNodes.length);
+					for (var i = 0; i < section.childNodes.length; i++) {
+						if (section.childNodes[i].nodeType === 1) {
+							console.log(section.childNodes[i].nodeType);
+							console.log(section.childNodes[i].tagName);
+						}
+					}
+					console.log(section.children.length);
+					console.log(section.children[0].nodeName);
+					console.log(section.children[1].nodeName);
+					console.log(section.children[2].nodeName);
+					console.log(section.childNodes[0].nodeName);
+					console.log(section.childNodes[1].nodeName);
+					console.log(section.childNodes[2].nodeName);
+					console.log(section.firstChild.nodeName);
+					console.log(section.firstChild.parentNode.nodeName);
+					console.log(section.firstChild.nextSibling.nodeName);
+					console.log(section.children[0].nextSibling.nodeName);
+					console.log(section.children[0].previousSibling.nodeName);
+					console.log(section.lastChild.nodeName);
+				}());
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Training With Kuthi Devs")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
