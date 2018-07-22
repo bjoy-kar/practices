@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Fundamental Course</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("JavaScript Fundamental Course")</script></h2>
+		</div>
+		<div id="main_content">
+			<header>
+				<h1 id="headingOne" class="special habijabi">Lorem ipsum dolor sit amet.</h1>
+				<h3 id="heading3">heading no 3</h3>
+				<p class="paras">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, eaque?</p>
+				<p class="paras">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus odit asperiores quia laudantium consectetur ab.</p>
+				<br />
+				<section id="newSection">
+					<p id="paragraph">first child</p>
+					<h2>second child</h2>
+					<h3>third child</h3>
+				</section>
+			</header>
+			<script>
+				(function() {
+					"use strict";
+					
+					function currentPosition(position) {
+						console.log(position);
+					}
+
+					function changedPosition(position) {
+						console.log("Your new position is: " + position.coords.latitude + "," +  position.coords.longitude + "," +  position.coords.accuracy);
+					}
+
+					function positionError(posErr) {
+						console.log(posErr);
+					}
+
+					// navigator.geolocation.getCurrentPosition(success, error, [options])
+					if (navigator.geolocation) {
+						navigator.geolocation.getCurrentPosition(currentPosition, positionError,{timeout: 3000});
+						var watch = navigator.geolocation.watchPosition(changedPosition, positionError);
+						//navigator.geolocation.clearWatch(watch);
+					}
+				}());
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Training With Kuthi Devs")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
