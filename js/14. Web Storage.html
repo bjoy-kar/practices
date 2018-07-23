@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Fundamental Course</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2><script>document.write("JavaScript Fundamental Course")</script></h2>
+		</div>
+		<div id="main_content">
+
+			<script>
+				console.log(window.sessionStorage);
+				window.sessionStorage.setItem("bijoy", "kar");
+				window.sessionStorage.setItem("abul", {"obj": "kumar"});
+
+				console.log(window.sessionStorage.getItem("abul"));
+
+				function readAllItem() {
+					var x, length;
+					for (x = 0, length = window.sessionStorage.length; x < length; x++) {
+						console.log(window.sessionStorage.key(x));
+					}
+				}
+				// readAllItem();
+
+				// window.sessionStorage.removeItem("abul");
+
+				readAllItem();
+
+				// window.sessionStorage.clear();
+			// Check browser support
+			// if (typeof(Storage) !== "undefined") {
+			   
+			    
+			// } else {
+			//     console.log(sessionStorage.setItem("Sorry, your browser does not support Web Storage..."));
+			// }
+			</script>
+		</div>
+		<div class="footer">
+			<h2><script>document.write("Training With Kuthi Devs")</script></h2>
+		</div>
+	</section>
+</body>
+</html>
